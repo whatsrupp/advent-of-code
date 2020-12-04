@@ -42,5 +42,5 @@ print(task_1(),task_2())
 # Reflection - regex on string splitting is too complicated 
 # Didn't know about line.partition - could have been useful here, regex was probably too complex
 # Hacky outer scope array manipulation, this is very javascripty, but not possible in python
-
+# Maybe just read whole file in as a list, not really concerned about optimisation here
 
