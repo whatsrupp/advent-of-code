@@ -9,6 +9,7 @@ verify_ssl = true
 pytest = "*"
 pandas = "*"
 pytest-watch = "*"
+pytest-mock = "*"
 
 [requires]
 python_version = "3.8"
