@@ -28,7 +28,8 @@ Scanning online, looks like you could condense what I wrote into 2 lines of chai
 ### Day 6:
 It's at this point I begin to feel a bit concerned for our protagonist, lets call them Deboran.
 Deboran spends *yet another day* in an airpot obsessing over another airport related logistical nightmare. 
-I'm beginning to worry Deboran is a bit of a hyper altruistic walkover, drifting through life, loved by many but subject to exploitation. Are the airport staff crossing lines here? Are they asking too much? How long is it until Deboran overstreches and emotionally implodes into a maelstrom of resentment and bitterness?
+I'm beginning to worry Deboran is a bit of a hyper altruistic walkover, drifting through life, loved by many but subject to exploitation. Are the airport staff crossing lines here? Are they asking too much? How long is it until Deboran overstreches and emotionally implodes into a maelstrom of resentment and bitterness? 
+Additionally, after working through such a long task, to not read the original instructions properly would be crippling. Step it up Deboran
 
 Concerns about the storylines aside, I enjoyed this one.
 I took the opportunity to look into pytest and work out:
