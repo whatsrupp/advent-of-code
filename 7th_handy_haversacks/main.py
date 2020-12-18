@@ -30,23 +30,22 @@ def parse_bags(input_file_name="input.txt"):
 
 def task1():
   bags = parse_bags()
-
   def can_contain_target(bag_colour):
     target_bag_colour = "shiny_gold"
-
     rules = bags[bag_colour]
-
     if len(rules) == 0:
       return False
 
     for rule in rules:
       if rule["colour"] == target_bag_colour:
         return True
-      else:
-        return can_contain_target(rule["colour"])
-
+      elif can_contain_target(rule["colour"]):
+        return True
+    return False
   bag_count = 0
+  i = 0
   for bag_colour in bags.keys():
+    i += 1 
     if can_contain_target(bag_colour):
       bag_count += 1
 
