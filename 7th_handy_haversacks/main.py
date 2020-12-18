@@ -6,7 +6,6 @@ def parse_bags(input_file_name="input.txt"):
   for line in lines:
     bag_description, _, rules_description = line.strip().partition("contain")
     bag_colour = "_".join(bag_description.split(' ')[:2]) # converts to snake case eg shiny_gold
-    # rule_descriptions = children_info.split(",")
     rules = []
 
     if "no" in rules_description:
@@ -42,15 +41,29 @@ def task1():
       elif can_contain_target(rule["colour"]):
         return True
     return False
+
   bag_count = 0
-  i = 0
   for bag_colour in bags.keys():
-    i += 1 
     if can_contain_target(bag_colour):
       bag_count += 1
 
     
   return bag_count
+
+def task2():
+  bags = parse_bags()
+  def count_nested_bags(bag_colour = "shiny_gold"):
+    rules = bags[bag_colour]
+    
+    count = 0
+    for rule in rules:
+      count += rule["amount"]
+      count += rule["amount"] * count_nested_bags(rule["colour"])
+    return count
+    
+  return count_nested_bags()
+
+
 
 
 

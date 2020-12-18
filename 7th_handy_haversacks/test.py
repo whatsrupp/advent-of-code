@@ -3,7 +3,7 @@ import main
 import inspect
 
 
-complex_input = inspect.cleandoc(f'''
+input_1 = inspect.cleandoc(f'''
     light red bags contain 1 bright white bag, 2 muted yellow bags.
     dark orange bags contain 3 bright white bags, 4 muted yellow bags.
     bright white bags contain 1 shiny gold bag.
@@ -16,25 +16,19 @@ complex_input = inspect.cleandoc(f'''
     '''
 )
 
-input_1 = inspect.cleandoc(f'''
+input_2 = inspect.cleandoc(f'''
     faded blue bags contain no other bags.
     dotted black bags contain no other bags.
     '''
 )
 
-input_2 = inspect.cleandoc(f'''
+input_3 = inspect.cleandoc(f'''
     vibrant plum bags contain no other bags.
     dark olive bags contain no other bags.
     shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags.
     '''
 )
 
-infinite_loop = inspect.cleandoc(f'''
-    vibrant plum bags contain no other bags.
-    dark olive bags contain 1 shiny gold bag.
-    shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags.
-    '''
-)
 input_4 = inspect.cleandoc(f'''
     dark olive bags contain 1 tasty pink bag.
     silky bronze bags contain 1 shiny gold bag.
@@ -45,9 +39,9 @@ input_4 = inspect.cleandoc(f'''
 )
 
 test_data_task_1 = [
-  (input_1, 0),
+  (input_1, 4),
   (input_2, 0),
-  (infinite_loop, 2),
+  (input_3, 0),
   (input_4, 3)
 ]
 
@@ -59,4 +53,25 @@ def test_task_1(mock_input, expected, mocker):
   result = main.task1()
   assert(result == expected)
 
+input_5 = inspect.cleandoc(f'''
+    shiny gold bags contain 2 dark red bags.
+    dark red bags contain 2 dark orange bags.
+    dark orange bags contain 2 dark yellow bags.
+    dark yellow bags contain 2 dark green bags.
+    dark green bags contain 2 dark blue bags.
+    dark blue bags contain 2 dark violet bags.
+    dark violet bags contain no other bags.
+    '''
+)
 
+test_data_task_2 = [
+  (input_1, 32),
+  (input_5, 126),
+]
+
+@pytest.mark.parametrize('mock_input, expected', test_data_task_2)
+def test_task_2(mock_input, expected, mocker):
+  mock_open = mocker.mock_open(read_data=mock_input)
+  mocker.patch("builtins.open", mock_open)
+  result = main.task2()
+  assert(result == expected)
