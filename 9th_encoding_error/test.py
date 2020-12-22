@@ -51,3 +51,4 @@ def test_task_2(mock_input, expected, mocker):
   mocker.patch("builtins.open", mock_open)
   result = main.task2()
   assert(result == expected)
+

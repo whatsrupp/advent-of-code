@@ -81,3 +81,13 @@ def task1():
       acc += op["value"]
     elif op["command"] == "jmp":
       i += op["value"]
+
+# This was a good one. 
+# I stumbled a bit with part 2 because I tried to do it all within one loop. But really there's two loop concepts.
+# 1) The outer loop which is running through the broken program.
+# 2) When you hit a nop or a jmp and then loop through the program using a potential fix
+
+# It's possible to do it with one loop but you add if statements and need to be aware if you're exploring a potential fix or just iterating through the broken program.
+# It was much more sensible (and leant on the code you'd written in part one) to simply step through the original program and then explore if fixing a line makes the program exit, if it doesn't then keep stepping through.
+
+# Other mistakes I made were to mutate the the operations data structure to store the visited state as you might in a large tree. But because there's lots of potential pathways if you mutate state you have to reset state. Using a new empty set when exploring if a fix works was more effective. 
