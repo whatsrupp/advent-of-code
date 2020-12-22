@@ -2,6 +2,10 @@
 
 I'm about to launch into some data processing at work with pandas and I haven't properly used python in *ages*, so I'm going to use this to get refreshed with the world of python.
 
+I started off writing notes on each task here, pitfalls pros and cons. But I started putting them by the code for context.
+Instead, I was struck by just how insane the plot line is of this years calendar.
+I'll be writing down what I discover about our protagonist, who I have chosen to call Deboran as we go.
+
 ### Day 1:
 Ok after enthusiastically setting off on this one, I regret the pandas decision - would have been much better with recursion. Blimey. Although, it seems to be a common theme online that people pick inappropriate tech and force themselves to solve it with that. Eg. Excel. 
 
@@ -39,36 +43,38 @@ I took the opportunity to look into pytest and work out:
 Haven't used sets in python before, thought they worked quite well for part 1
 
 ### Day 7:
-Absolutely can't catch a break, what an obtuse baggage handling system. After this, I'm wondering if the airline is actually a front for the biggest.
-We're in the poles,
-And impractical
+Absolutely can't catch a break, what an obtuse baggage handling system. After this, I'm wondering if the airline is actually a front for a fraudulent suitcase upselling scheme.
 
-I'm going to d
-I'd like to take this a bit seriously and properly consider the implications of such an obtuse baggage handling policy. 
+- points to explore
+- How much would all these bags weigh
+- How much would they cost
+- How long would they take to search and pack
+- How much space would they take up
 
-Lets say a bag search takes about 30s per bag, for a thorough search
-
-Going to drop some spoilers here. To take a shiny gold bag on you need 9569 other bags inside the 
-
-```
-Apparently, nobody responsible for these regulations considered how long they would take to enforce!
-```
-
-
-
-A regular suitcase 
 
 ### Day 8:
 It's nice to know that the airline can at least get its bread and butter right, ie, flying. Honestly, after all the decisions about boarding, passports and infinite bags I was slightly worried Deboran would never leave. We discover that Deboran is partial to a drink with a bit of *pizazz*. Probably needs it after all these mishaps.
-There's a weak plot point in that we're not sure how Deboran is able to get the text file from the Kid's console but we'll gloss over that.
-Today, Deboran fixes a kid's handhold console by looking at some boot code.
+There's a weak plot point in that we're not sure how Deboran is able to get the text file from the Kid's console or how the kid knows that Deboran will fix the boot code of the games console. But we'll gloss over that.
 
-This was a good one. 
-I stumbled a bit with part 2 because I tried to do it all within one loop. But really there's two loop concepts.
-1) The outer loop which is running through the broken program.
-2) When you hit a nop or a jmp and then loop through the program using a potential fix
 
-It's possible to do it with one loop but you add if statements and need to be aware if you're exploring a potential fix or just iterating through the broken program.
-It was much more sensible (and leant on the code you'd written in part one) to simply step through the original program and then explore if fixing a line makes the program exit, if it doesn't then keep stepping through.
+### Day 9
+It's here that we begin to see the cracks start to show in sweet benevolent Deboran's morals.
+Not content with the small rebellious buzz you get from taking your phone out of airplane mode mid air, Deboran is wiring themselves into the plane mainframe and sniffing away at those sweet sweet festive data packets.
+All with two paperclips too. We know at this stage of Deboran's infinite resourcefulness so the paperclips are to be expected. But, until now, Deboran hasn't been autonomous. They've been at the beck and call of others. The first time they have a bit of space for themselves, they hack into a plane. That's a bit suspicious don't you agree?
 
-Other mistakes I made were to mutate the the operations data structure to store the visited state as you might in a large tree. But because there's lots of potential pathways if you mutate state you have to reset state. Using a new empty set when exploring if a fix works was more effective. 
+
+### Day 10
+We all know the international plug adapter scene is a bit chaotic. 
+But blimey. Bringing 104 different adapters on one trip. Just for one miscellaneous "device".
+Lets hope they have storage space to store all tho...
+Wait. 
+Lets not forget. THE 9569 BAGS being hauled around inside of the gold shiny bag from task 7. Great no storage issues here.
+
+Assuming plugs of 40x40x20mm weighing in at 50g. That's looking at 5.2L of storage and 5kg of weight.
+The best image from this task has got to be the ridiculous 2m tall staff of joltage adaptors that Deboran has to assemble just to charge their gear.  At least we know a Deboran is consistent. Carrying around inane amounts of junk is a mainstay and not just a one off because of airport baggage regulations.
+
+
+
+
+
+
