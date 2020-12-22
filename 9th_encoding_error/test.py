@@ -42,12 +42,12 @@ def test_task_1(mock_input, expected, mocker):
 
 
 test_data_task_2 = [
-  (input_1, 127),
+  (input_1, 62),
 ]
 
-# @pytest.mark.parametrize('mock_input, expected', test_data_task_2)
-# def test_task_2(mock_input, expected, mocker):
-#   mock_open = mocker.mock_open(read_data=mock_input)
-#   mocker.patch("builtins.open", mock_open)
-#   result = main.task2()
-#   assert(result == expected)
+@pytest.mark.parametrize('mock_input, expected', test_data_task_2)
+def test_task_2(mock_input, expected, mocker):
+  mock_open = mocker.mock_open(read_data=mock_input)
+  mocker.patch("builtins.open", mock_open)
+  result = main.task2()
+  assert(result == expected)
