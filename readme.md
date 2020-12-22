@@ -38,3 +38,37 @@ I took the opportunity to look into pytest and work out:
 
 Haven't used sets in python before, thought they worked quite well for part 1
 
+### Day 7:
+Absolutely can't catch a break, what an obtuse baggage handling system. After this, I'm wondering if the airline is actually a front for the biggest.
+We're in the poles,
+And impractical
+
+I'm going to d
+I'd like to take this a bit seriously and properly consider the implications of such an obtuse baggage handling policy. 
+
+Lets say a bag search takes about 30s per bag, for a thorough search
+
+Going to drop some spoilers here. To take a shiny gold bag on you need 9569 other bags inside the 
+
+```
+Apparently, nobody responsible for these regulations considered how long they would take to enforce!
+```
+
+
+
+A regular suitcase 
+
+### Day 8:
+It's nice to know that the airline can at least get its bread and butter right, ie, flying. Honestly, after all the decisions about boarding, passports and infinite bags I was slightly worried Deboran would never leave. We discover that Deboran is partial to a drink with a bit of *pizazz*. Probably needs it after all these mishaps.
+There's a weak plot point in that we're not sure how Deboran is able to get the text file from the Kid's console but we'll gloss over that.
+Today, Deboran fixes a kid's handhold console by looking at some boot code.
+
+This was a good one. 
+I stumbled a bit with part 2 because I tried to do it all within one loop. But really there's two loop concepts.
+1) The outer loop which is running through the broken program.
+2) When you hit a nop or a jmp and then loop through the program using a potential fix
+
+It's possible to do it with one loop but you add if statements and need to be aware if you're exploring a potential fix or just iterating through the broken program.
+It was much more sensible (and leant on the code you'd written in part one) to simply step through the original program and then explore if fixing a line makes the program exit, if it doesn't then keep stepping through.
+
+Other mistakes I made were to mutate the the operations data structure to store the visited state as you might in a large tree. But because there's lots of potential pathways if you mutate state you have to reset state. Using a new empty set when exploring if a fix works was more effective. 
